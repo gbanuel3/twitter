@@ -73,9 +73,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="190" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jv1-nn-Stb">
-                                <rect key="frame" x="0.0" y="56" width="414" height="840"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="190" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jv1-nn-Stb">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCellTableViewCell" rowHeight="190" id="yuc-GU-AKw" customClass="TweetCellTableViewCell">
@@ -189,6 +188,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ugE-Ul-H9I"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Jv1-nn-Stb" secondAttribute="bottom" id="75P-81-UNy"/>
+                            <constraint firstItem="Jv1-nn-Stb" firstAttribute="trailing" secondItem="ugE-Ul-H9I" secondAttribute="trailing" id="Nng-Ek-euW"/>
+                            <constraint firstItem="Jv1-nn-Stb" firstAttribute="top" secondItem="ugE-Ul-H9I" secondAttribute="top" id="O7y-MH-Im0"/>
+                            <constraint firstItem="Jv1-nn-Stb" firstAttribute="leading" secondItem="ugE-Ul-H9I" secondAttribute="leading" id="wFq-hA-9sB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home Timeline" id="MOc-fV-EZE">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="cms-tn-2G9">
