@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tweet.h"
 
 @interface TimelineViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *logOutButton;
-
+- (void)didTweet:(Tweet *)tweet;
 @end
