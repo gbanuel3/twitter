@@ -85,6 +85,8 @@
     cell.favoriteCountLabel.text = [NSString stringWithFormat:@"%d", tweet.favoriteCount];
     cell.dateLabel.text = tweet.createdAtString;
     cell.tweetLabel.text = tweet.text;
+    cell.tweet = tweet;
+    
     NSURL *posterImageURL = [NSURL URLWithString:tweet.user.profilePicture];
     cell.posterView.image = nil;
     [cell.posterView setImageWithURL:posterImageURL];

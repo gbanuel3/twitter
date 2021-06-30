@@ -126,6 +126,9 @@
                                                     <rect key="frame" x="106" y="139" width="30" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Retweet" image="retweet-icon"/>
+                                                    <connections>
+                                                        <action selector="didTapRetweet:" destination="yuc-GU-AKw" eventType="touchDown" id="SlD-uM-lvI"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIM-P6-cpj">
                                                     <rect key="frame" x="242" y="143" width="49" height="30"/>
@@ -136,6 +139,9 @@
                                                     <rect key="frame" x="168" y="139" width="29" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Like" image="favor-icon"/>
+                                                    <connections>
+                                                        <action selector="didTapFavorite:" destination="yuc-GU-AKw" eventType="touchDown" id="hHR-By-M7j"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eec-qC-p7R">
                                                     <rect key="frame" x="195" y="143" width="49" height="30"/>
