@@ -50,8 +50,8 @@
 }
 
 - (void)didTweet:(Tweet *)tweet{
-    [_arrayOfTweets addObject:tweet];
-    [self.tableView reloadData];
+    [self loadTweets];
+    [self dismissViewControllerAnimated:true completion:nil];
 };
 
 - (void)viewDidLoad {

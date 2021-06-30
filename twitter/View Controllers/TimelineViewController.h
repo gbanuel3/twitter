@@ -11,5 +11,5 @@
 
 @interface TimelineViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *logOutButton;
-- (void)didTweet:(Tweet *)tweet;
+
 @end
