@@ -62,8 +62,8 @@
         [dateFormatter setDateFormat:@"EEE MMM dd HH:mm:ss ZZZ yyyy"];
         NSDate *agoDate  = [dateFormatter dateFromString:createdAtOriginalString];
         [dateFormatter setDateFormat:@"EEE MMM dd hh:mm:ss yyyy"];
-        NSLog(@"Time Ago: %@", agoDate.shortTimeAgoSinceNow);
-        self.timeAgo = [dateFormatter stringFromDate:agoDate];
+
+        self.timeAgo = agoDate.shortTimeAgoSinceNow;
 
     }
     return self;

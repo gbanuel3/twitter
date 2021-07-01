@@ -89,6 +89,8 @@
 - (void) refreshData{
     self.favoriteCountLabel.text = [NSString stringWithFormat:@"%d", self.tweet.favoriteCount];
     self.retweetCountLabel.text =  [NSString stringWithFormat:@"%d", self.tweet.retweetCount];
+    NSLog(@"%@",self.tweet.timeAgo);
+    self.dateLabel.text = self.tweet.timeAgo;
     UIImage *favImageYES = [UIImage imageNamed:@"favor-icon-red.png"];
     UIImage *favImageNO = [UIImage imageNamed:@"favor-icon.png"];
     UIImage *retweetImageYES = [UIImage imageNamed:@"retweet-icon-green.png"];

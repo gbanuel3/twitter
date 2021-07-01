@@ -83,7 +83,7 @@
     cell.handleLabel.text = [NSString stringWithFormat:@"@%@", tweet.user.screenName];
     cell.retweetCountLabel.text = [NSString stringWithFormat:@"%d", tweet.retweetCount];
     cell.favoriteCountLabel.text = [NSString stringWithFormat:@"%d", tweet.favoriteCount];
-    cell.dateLabel.text = tweet.createdAtString;
+    cell.dateLabel.text = tweet.timeAgo;
     cell.tweetLabel.text = tweet.text;
     cell.tweet = tweet;
     

@@ -77,11 +77,11 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCellTableViewCell" rowHeight="190" id="yuc-GU-AKw" customClass="TweetCellTableViewCell">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="190"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCellTableViewCell" id="yuc-GU-AKw" customClass="TweetCellTableViewCell">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="147.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yuc-GU-AKw" id="YFu-8z-FAK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="147.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwitterLogo" translatesAutoresizingMaskIntoConstraints="NO" id="DOB-z5-76u">
@@ -98,7 +98,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEr-ML-2di">
-                                                    <rect key="frame" x="107" y="10" width="45" height="21"/>
+                                                    <rect key="frame" x="107" y="10" width="45" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -115,14 +115,14 @@
                                                     <color key="textColor" red="0.38654303800000001" green="0.38654303800000001" blue="0.38654303800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is example information that might be tweeted" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qy-u7-eYh">
-                                                    <rect key="frame" x="107" y="39" width="292" height="33.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is text that could possibly be tweeted by a user" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qy-u7-eYh">
+                                                    <rect key="frame" x="107" y="38.5" width="292" height="33.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjq-d7-BUR">
-                                                    <rect key="frame" x="166" y="92.5" width="32" height="35"/>
+                                                    <rect key="frame" x="166" y="92" width="32" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="32" id="PQn-9J-6zd"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="c5Z-fD-pib"/>
@@ -135,7 +135,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIM-P6-cpj">
-                                                    <rect key="frame" x="329" y="92.5" width="35" height="35"/>
+                                                    <rect key="frame" x="329" y="92" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="6nf-M1-i6c"/>
                                                         <constraint firstAttribute="height" constant="35" id="Hs8-bg-APY"/>
@@ -143,7 +143,7 @@
                                                     <state key="normal" title="Send" image="message-icon"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mke-YQ-ksh">
-                                                    <rect key="frame" x="268" y="90.5" width="29" height="35"/>
+                                                    <rect key="frame" x="268" y="90" width="29" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="2kk-hn-b2G"/>
                                                         <constraint firstAttribute="width" constant="29" id="kKn-uP-azY"/>
@@ -154,7 +154,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eec-qC-p7R">
-                                                    <rect key="frame" x="297" y="92.5" width="7" height="35"/>
+                                                    <rect key="frame" x="297" y="92" width="7" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="SMI-em-60k"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="bH3-5W-oPR"/>
@@ -164,7 +164,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2f-44-ue3">
-                                                    <rect key="frame" x="198" y="92.5" width="7" height="35"/>
+                                                    <rect key="frame" x="198" y="92" width="7" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="Gqb-Ia-fFO"/>
                                                         <constraint firstAttribute="height" constant="35" id="WKk-jx-4mh"/>
@@ -174,7 +174,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhr-9p-K24">
-                                                    <rect key="frame" x="103" y="92.5" width="33" height="35"/>
+                                                    <rect key="frame" x="103" y="92" width="33" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="33" id="8m2-Ym-Gkq"/>
                                                         <constraint firstAttribute="height" constant="35" id="dPu-i2-IVO"/>
