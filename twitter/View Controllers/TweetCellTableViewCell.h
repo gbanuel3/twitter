@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *retweetCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *favoriteCountLabel;
 @property (nonatomic,strong) Tweet *tweet;
-
+- (void) refreshData;
 @end
 
 NS_ASSUME_NONNULL_END
