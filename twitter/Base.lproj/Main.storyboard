@@ -267,12 +267,15 @@
         <scene sceneID="OcC-aH-6xv">
             <objects>
                 <viewController id="5cL-YU-jHe" customClass="DetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ut7-W7-RQ3">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="ut7-W7-RQ3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the full tweet text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWv-Mm-jeF">
-                                <rect key="frame" x="5" y="106" width="404" height="546"/>
+                                <rect key="frame" x="5" y="106" width="404" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="CGP-98-2JW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -287,7 +290,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wht-8D-bMK" userLabel="FavButton">
-                                <rect key="frame" x="169.5" y="672" width="75" height="75"/>
+                                <rect key="frame" x="169" y="526" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="Agq-ay-zo8"/>
                                     <constraint firstAttribute="height" constant="75" id="YBi-OK-CGa"/>
@@ -298,7 +301,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBi-GT-Zd8" userLabel="RetweetButton">
-                                <rect key="frame" x="169.5" y="757" width="75" height="75"/>
+                                <rect key="frame" x="169.5" y="611" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="0if-Kc-WxH"/>
                                     <constraint firstAttribute="height" constant="75" id="uEV-Q0-C2q"/>
