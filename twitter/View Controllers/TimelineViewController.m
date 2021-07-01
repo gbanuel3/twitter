@@ -67,6 +67,11 @@
     [self.tableView addSubview:self.refreshControl];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [self loadTweets];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -87,6 +92,22 @@
     cell.dateLabel.text = tweet.timeAgo;
     cell.tweetLabel.text = tweet.text;
     cell.tweet = tweet;
+    
+    UIImage *favImageYES = [UIImage imageNamed:@"favor-icon-red.png"];
+    UIImage *favImageNO = [UIImage imageNamed:@"favor-icon.png"];
+    UIImage *retweetImageYES = [UIImage imageNamed:@"retweet-icon-green.png"];
+    UIImage *retweetImageNO = [UIImage imageNamed:@"retweet-icon.png"];
+  
+    if(cell.tweet.favorited == YES){
+        [cell.favoriteButton setImage:favImageYES forState:UIControlStateNormal];
+    }else{
+        [cell.favoriteButton setImage:favImageNO forState:UIControlStateNormal];
+    }
+    if(cell.tweet.retweeted == YES){
+        [cell.retweetButton setImage:retweetImageYES forState:UIControlStateNormal];
+    }else{
+        [cell.retweetButton setImage:retweetImageNO forState:UIControlStateNormal];
+    }
     
     NSURL *posterImageURL = [NSURL URLWithString:tweet.user.profilePicture];
     cell.posterView.image = nil;
