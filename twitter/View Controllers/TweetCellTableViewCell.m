@@ -95,6 +95,7 @@
     UIImage *favImageNO = [UIImage imageNamed:@"favor-icon.png"];
     UIImage *retweetImageYES = [UIImage imageNamed:@"retweet-icon-green.png"];
     UIImage *retweetImageNO = [UIImage imageNamed:@"retweet-icon.png"];
+  
     if(self.tweet.favorited == YES){
         [self.favoriteButton setImage:favImageYES forState:UIControlStateNormal];
     }else{

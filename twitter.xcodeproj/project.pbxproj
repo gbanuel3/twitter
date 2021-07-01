@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B068708268DA45200EEA1C2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B068707268DA45200EEA1C2 /* DetailViewController.m */; };
 		2B5F4755268A749200335882 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B5F4754268A749200335882 /* Keys.plist */; };
 		2B5F4758268A932400335882 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F4757268A932400335882 /* User.m */; };
 		2B5F475B268A942B00335882 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F475A268A942B00335882 /* Tweet.m */; };
@@ -26,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		1397EA94AE1DE5F26C1724FD /* Pods-twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter/Pods-twitter.release.xcconfig"; sourceTree = "<group>"; };
+		2B068706268DA45200EEA1C2 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2B068707268DA45200EEA1C2 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		2B5F4754268A749200335882 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		2B5F4756268A932400335882 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		2B5F4757268A932400335882 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				2B5F475D268BAD7900335882 /* TweetCellTableViewCell.m */,
 				2B5F475F268C3DD900335882 /* ComposeViewController.h */,
 				2B5F4760268C3DD900335882 /* ComposeViewController.m */,
+				2B068706268DA45200EEA1C2 /* DetailViewController.h */,
+				2B068707268DA45200EEA1C2 /* DetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				6AD278E820BC4B970085BC29 /* main.m in Sources */,
 				2B5F475B268A942B00335882 /* Tweet.m in Sources */,
 				6AD2790620BCC0380085BC29 /* LoginViewController.m in Sources */,
+				2B068708268DA45200EEA1C2 /* DetailViewController.m in Sources */,
 				6AD278DA20BC4B950085BC29 /* AppDelegate.m in Sources */,
 				6AD278F620BCB68B0085BC29 /* APIManager.m in Sources */,
 				6AD2790920BCC04D0085BC29 /* TimelineViewController.m in Sources */,
