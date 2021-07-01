@@ -37,7 +37,7 @@
                  NSLog(@"Error retweeting tweet: %@", error.localizedDescription);
             }
             else{
-                NSLog(@"Successfully retweeted the following Tweet: %@", tweet.text);
+                NSLog(@"Successfully retweeted the following Tweet: %@", self.tweet.text);
             }
         }];
         
@@ -50,11 +50,11 @@
                  NSLog(@"Error unretweeting tweet: %@", error.localizedDescription);
             }
             else{
-                NSLog(@"Successfully unretweeted the following Tweet: %@", tweet.text);
+                NSLog(@"Successfully unretweeted the following Tweet: %@", self.tweet.text);
             }
         }];
     }
-    [self refreshData];
+    [self reloadImages];
 }
 - (IBAction)onClickFavorite:(id)sender {
     if(self.tweet.favorited == NO){
@@ -66,7 +66,7 @@
                  NSLog(@"Error favoriting tweet: %@", error.localizedDescription);
             }
             else{
-                NSLog(@"Successfully favorited the following Tweet: %@", tweet.text);
+                NSLog(@"Successfully favorited the following Tweet: %@", self.tweet.text);
             }
         }];
         
@@ -79,17 +79,22 @@
                  NSLog(@"Error unfavoriting tweet: %@", error.localizedDescription);
             }
             else{
-                NSLog(@"Successfully unfavorited the following Tweet: %@", tweet.text);
+                NSLog(@"Successfully unfavorited the following Tweet: %@", self.tweet.text);
             }
         }];
     }
 
-    [self refreshData];
-
-
-    
+    [self reloadImages];
 }
-- (void) refreshData{
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.tweetInfo.text = self.tweet.text;
+    self.tweetAuthorLabel.text = self.tweet.user.name;
+    [self reloadImages];
+}
+-(void) reloadImages{
     UIImage *favImageYES = [UIImage imageNamed:@"favor-icon-red.png"];
     UIImage *favImageNO = [UIImage imageNamed:@"favor-icon.png"];
     UIImage *retweetImageYES = [UIImage imageNamed:@"retweet-icon-green.png"];
@@ -107,14 +112,8 @@
     }else{
         [self.retweetButton setImage:retweetImageNO forState:UIControlStateNormal];
         [self.tweetCell.retweetButton setImage:retweetImageNO forState:UIControlStateNormal];
+        }
     }
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.tweetInfo.text = self.tweet.text;
-    self.tweetAuthorLabel.text = self.tweet.user.name;
-}
 
 /*
 #pragma mark - Navigation
