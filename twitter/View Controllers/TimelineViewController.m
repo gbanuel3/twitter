@@ -38,7 +38,7 @@
 }
 
 - (void) loadTweets{
-    [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
+    [[APIManager shared] getHomeTimelineWithCompletion:@"20" completion:^(NSArray *tweets, NSError *error){
         if (tweets){
             NSLog(@"😎😎😎 Successfully loaded home timeline");
             self.arrayOfTweets = tweets;
@@ -79,6 +79,23 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //    return count of tweets;
     return self.arrayOfTweets.count;
+}
+- (void) loadMoreData:(NSString *)count{
+    [[APIManager shared] getHomeTimelineWithCompletion:count completion:^(NSArray *tweets, NSError *error){
+        if (tweets){
+            NSLog(@"😎😎😎 Successfully loaded home timeline");
+            self.arrayOfTweets = tweets;
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
+        }
+        [self.refreshControl endRefreshing];
+    }];
+}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row + 1 == [self.arrayOfTweets count]){
+        [self loadMoreData:[NSString stringWithFormat:@"%lu",[self.arrayOfTweets count]+20]];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
